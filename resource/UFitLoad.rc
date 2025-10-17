@@ -1,0 +1,121 @@
+#undef RC_INVOKED
+#include <commctrl.h>
+#define RC_INVOKED 1
+#include <windows.h>
+#include "UFitLoad.h"
+
+IDI_ICON ICON "UFitLoad.ico"
+1 24 "Manifest.xml"
+
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILETYPE 1
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "SysTools"
+      VALUE "FileDescription", "UFitLoad"
+      VALUE "FileVersion", "1.0.0.0"
+      VALUE "LegalCopyright", "\xA9 SysTools 2025"
+      VALUE "OriginalFilename", "UFitLoad.exe"
+      VALUE "InternalName", "UFitLoad"
+      VALUE "ProductName", "UFitLoad"
+      VALUE "ProductVersion", "1.00"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END
+
+IDD_MAINFORM DIALOG 0, 0, 256, 178
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+CAPTION "UFitLoad v1.00"
+FONT 8, "Ms Sans Serif"
+BEGIN
+  EDITTEXT IDC_TEXT, 7, 7, 242, 125, WS_VSCROLL | ES_MULTILINE | ES_READONLY
+  EDITTEXT IDC_FILE, 7, 137, 180, 14, ES_AUTOHSCROLL | ES_WANTRETURN
+  PUSHBUTTON "&Browse", IDC_LOOK, 192, 137, 55, 14
+  PUSHBUTTON "&Start", IDC_WORK, 7, 157, 55, 14
+  PUSHBUTTON "&Install", IDC_INIT, 102, 157, 55, 14
+  PUSHBUTTON "&Cancel", IDCANCEL, 192, 157, 55, 14
+END
+
+STRINGTABLE
+BEGIN
+  IDS_FILE "setup-unifit2006-demo.exe"
+  IDS_TEXT\
+    "UFitLoad v1.00 - Unifit Installer And Portable Loader\r\n"\
+    "\xA9 SysTools 2025\r\n"\
+    "http://systools.losthost.org/?misc#ufitload\r\n"\
+    "\r\n"\
+    "This is Unifit modern systems portable installer and loader. Supported (tested) with "\
+    "Unifit versions from 2001 till 2006 inclusive (see below for archived download links). "\
+    "After installation Unifit will be portable and can be run from anywhere "\
+    "(for example even from removable USB flash drive) but you need to run software "\
+    "by pressing ""Start"" button on this window or it won't work otherwise.\r\n"\
+    "\r\n"\
+    "Supported Unifit setup files from 2001 till 2006 in archives like this:\r\n"\
+    "setup-unifit2006-demo.exe\r\n"\
+    "\r\n"\
+    "Custom software development for your business or personal usage.\r\n"\
+    "Contact SysTools for more details.\r\n"\
+    "\r\n"\
+    "=== Unifit copyright ===\r\n"\
+    "\r\n"\
+    "Unifit\r\n"\
+    "Universal Spectrum Processing and Analysis Program for ESCA-Spectra\r\n"\
+    "\xA9 Ronald Hesse, Leipzig University, 2001-2006\r\n"\
+    "http://www.uni-leipzig.de/~unifit/\r\n"\
+    "\r\n"\
+    "=== Unifit download archive links ===\r\n"\
+    "\r\n"\
+    "Note that Unifit 2006 and Unifit 2007 missing in the Internet Archive.\r\n"\
+    "And starting from Unifit 2008 loading of measurement data was disabled.\r\n"\
+    "Please e-mail SysTools if you have Unifit 2007 installation archive.\r\n"\
+    "Thank you!\r\n"\
+    "\r\n"\
+    "Various supported Unifit releases available in the Internet Archive:\r\n"\
+    "\r\n"\
+    "https://web.archive.org/web/20050218203755/http://www.uni-leipzig.de:80/~unifit/setup-unifit2005-demo.EXE\r\n"\
+    "\r\n"\
+    "https://web.archive.org/web/20050218203732/http://www.uni-leipzig.de:80/~unifit/setup-unifit2004-demo.EXE\r\n"\
+    "\r\n"\
+    "https://web.archive.org/web/20030805165414/http://www.uni-leipzig.de:80/~unifit/setup-unifit2003-demo.exe\r\n"\
+    "\r\n"\
+    "https://web.archive.org/web/20021214183322/http://www.uni-leipzig.de:80/~unifit/setup-unifit2002-demo.exe\r\n"\
+    "\r\n"\
+    "https://web.archive.org/web/20011222064736/http://www.uni-leipzig.de:80/~unifit/setup-unifit2001-demo.exe\r\n"\
+    "\r\n"\
+    "=== Related scientific software ===\r\n"\
+    "\r\n"\
+    "ChemBase v1.07\r\n"\
+    "\xA9 SysTools 2017-2023\r\n"\
+    "http://systools.losthost.org/?misc#chembase\r\n"\
+    "\r\n"\
+    "ChemBase is a free open source software that provides an easy and quick way to use the database "\
+    "for the energy positions of the core peaks of elements in different chemical compounds. "\
+    "It contains a huge number of references to the works carried out by X-ray photoelectron "\
+    "spectroscopy. It allows you to quickly carry out a comparative analysis of the experimental "\
+    "data available in the literature, and select the appropriate references. ChemBase utilises "\
+    "open NIST X-ray Photoelectron Spectroscopy Database implementing Binding Energy version of "\
+    "the web search:\r\n"\
+    "https://srdata.nist.gov/xps/SpectraIdentifier\r\n"\
+  IDS_CONFIRM_INSTALL\
+    "Unifit files will be unpacked to the same folder you ran this installer from.\r\n"\
+    "You can move installed software folder anywhere else after that.\r\n\r\n"\
+    "Unifit must be run through ""Start"" button on this window after successful installation."\
+  IDS_ERROR_START "Can't find or start Unifit executable or unsupported version."
+  IDS_WISE_OK "Software successfully installed.\r\n\r\nUnifit always must be run through ""Start"" button."
+  IDS_WISE_INVALID_NAME "Invalid file name specified."
+  IDS_WISE_ERROR_OPEN "Specified file name not found or no access for read."
+  IDS_WISE_INVALID_DATA "Input file format not a valid NE or PE file or WISE overlay not found."
+  IDS_WISE_INVALID_FORMAT "Input file format not a WISE archive or supported version."
+  IDS_WISE_NO_MEMORY "Out of memory when unpacking WISE archive file contents."
+  IDS_WISE_ERROR_SAVE "Can't create one of the output files - probably no write access or disk full."
+  IDS_WISE_UNKNOWN "Unknown WISE unpacker error."
+END
