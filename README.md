@@ -34,3 +34,18 @@ Universal Spectrum Processing and Analysis Program for ESCA-Spectra
 (c) Ronald Hesse, Leipzig University, 2001-2006
 
 http://www.uni-leipzig.de/~unifit/
+
+
+
+
+Archived copies of Unifit software
+
+[Unifit 2005 demo](https://web.archive.org/web/20050218203755/http://www.uni-leipzig.de:80/~unifit/setup-unifit2005-demo.EXE)
+
+[Unifit 2004 demo](https://web.archive.org/web/20050218203732/http://www.uni-leipzig.de:80/~unifit/setup-unifit2004-demo.EXE)
+
+[Unifit 2003 demo](https://web.archive.org/web/20030805165414/http://www.uni-leipzig.de:80/~unifit/setup-unifit2003-demo.exe)
+
+[Unifit 2002 demo](https://web.archive.org/web/20021214183322/http://www.uni-leipzig.de:80/~unifit/setup-unifit2002-demo.exe)
+
+[Unifit 2001 demo](https://web.archive.org/web/20011222064736/http://www.uni-leipzig.de:80/~unifit/setup-unifit2001-demo.exe)
